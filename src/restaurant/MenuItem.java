@@ -64,6 +64,52 @@ public class MenuItem {
 
     //instance method to return all the info from the object
     public String MenuItemDetails() {
-        return this.name + "\n" + this.price + "\n" +  this.category + "\n" +  this.description + "\n" +  this.recentAdd;
+        return this.name + "\n" + this.price + "\n" + this.category + "\n" + this.description + "\n" + this.recentAdd;
     }
+
+    //print out the things in the menu
+
+    public String toString() {
+        return "name: " + this.name + "\n price: " + this.price;
+    }
+
+    // a way to add and remove items
+
+    //a way to tell if it is new
+    public String newlyAdded() {
+        if (this.recentAdd == true) {
+            return "New item!";
+        }
+
+        return null;
+    }
+
+
+        //if true, then set aRecent Add to "New!"
+
+    // a way to tell when the menu was last updated
+
+    //a way to print out both a single menu item as well as the entire menu
+
+    //a way to determine if two menuItems are the same
+
+    public boolean equals(Object menuItem){
+        //check to see if it equals itself
+        if (menuItem == this) {
+            return true;
+        }
+
+        //check not null
+        if (menuItem == null) {
+            return false;
+        }
+
+        //ensure completed from the same class. can the object be cast?
+        if (menuItem.getClass() != getClass()) {
+            return false;
+        }
+
+        MenuItem theMenuItem = (MenuItem) menuItem;
+        return theMenuItem.getName() == getName();
+        }
 }
