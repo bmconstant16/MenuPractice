@@ -70,24 +70,16 @@ public class MenuItem {
     //print out the things in the menu
 
     public String toString() {
-        return "name: " + this.name + "\n price: " + this.price;
-    }
-
-    // a way to add and remove items
-
-    //a way to tell if it is new
-    public String newlyAdded() {
-        if (this.recentAdd == true) {
-            return "New item!";
+        if (this.recentAdd == true){
+            return "\n name: " + this.name + " " + this.price + " \n" + this.category + " " + "New item!" + " " + this.description+"\n";
+        } else {
+            return "\n name: " + this.name + " " + this.price + " \n" + this.category + " " + this.description+"\n";
         }
 
-        return null;
     }
 
 
-        //if true, then set aRecent Add to "New!"
-
-    // a way to tell when the menu was last updated
+    // a way to tell when the menu was last updated- don't know how to do this?
 
     //a way to print out both a single menu item as well as the entire menu
 
